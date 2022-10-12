@@ -1,0 +1,20 @@
+
+{{page-title "Photos"}}
+
+<div id="container">
+  {{#each @model as |photo|}}
+      <Photo-Item
+          @photoId={{photo.id}}
+          @data={{photo}}
+      />
+  {{/each}}
+
+  <Page-Buttons
+    @currPage={{@model.currPage}}
+  />
+
+</div>
+
+{{outlet}}
+
+

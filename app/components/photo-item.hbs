@@ -1,0 +1,13 @@
+{{@data.author}}
+
+<LinkTo @route="product" @model={{@photoId}} >
+    <img src={{concat "https://picsum.photos/id/" @photoId "/200/"}} />
+
+</LinkTo>
+
+<!--
+<a href= {{concat "/product/" @photoId}}>
+    <img src={{concat "https://picsum.photos/id/" @photoId "/200/"}} />
+</a>
+-->
+

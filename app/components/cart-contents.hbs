@@ -1,0 +1,9 @@
+
+<ol>
+  {{#each this.cart.items as |item|}}
+    <li>
+      <img src={{concat "https://picsum.photos/id/" item.id "/200/"}} />
+      <button type="button" {{on "click" (fn this.remove item)}}>Remove</button>
+    </li>
+  {{/each}}
+</ol>

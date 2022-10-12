@@ -1,0 +1,13 @@
+
+<LinkTo @route="photos" @model={{changePage @currPage -1}}> Previous Page</LinkTo>
+
+<LinkTo @route="photos" @model={{changePage @currPage 1}}> 
+    Next Page
+</LinkTo>
+
+<!--
+<button type="button" {{on "click" (fn this.nextPage @currPage)}}> 
+    Next
+</button>
+
+-->
