@@ -5,6 +5,7 @@
   {{#each @model as |photo|}}
       <Photo-Item
           @photoId={{photo.id}}
+          @pdata={{photo}}
       />
   {{/each}}
 

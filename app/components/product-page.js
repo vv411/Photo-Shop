@@ -11,7 +11,6 @@ export default class ProductPageComponent extends Component {
 
   @action
   addToCart(prodId, prodPrice) {
-    console.log(prodPrice)
     let item = {
       id: prodId,
       price: parseFloat(prodPrice, 10),
@@ -20,10 +19,16 @@ export default class ProductPageComponent extends Component {
     this.cart.add(item);
   }
 
+  @action
+  setPrice(newPrice) {
+    this.price = newPrice;
+  }
+
   get getPrice() {
     return this.price;
   }
 
+  //Change image size depending on selected size
   get getDimension() {
     let dm="";
     
@@ -44,13 +49,8 @@ export default class ProductPageComponent extends Component {
     return dm;
   }
 
-  @action
-  setPrice(newPrice) {
-    this.price = newPrice;
+  get readMetaData() {
+    return this.mdata.getMetaData();
   }
 
-  @action
-  findAuth() {
-    return this.mdata.findAuthor();
-  }
 }

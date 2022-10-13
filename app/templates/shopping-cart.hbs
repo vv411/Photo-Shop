@@ -1,11 +1,8 @@
 {{page-title "Shopping Cart"}}
 
 <div class="p-5">
-    <h1> Total: {{this.totalPrice}} $</h1>
-
-    <h2> Items: </h2>
-
     <Cart-Contents 
+        @tPrice={{this.totalPrice}}
     />
 </div>
 

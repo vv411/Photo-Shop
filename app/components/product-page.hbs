@@ -1,10 +1,9 @@
-<div class="p-3">
- <span class="p-5 position-static"> {{getAuthor "100"}} </span>
-</div>
 
-<img class="p-3" src={{concat "https://picsum.photos/id/" @pid "/" this.getDimension "/"}} />
+<div class="d-inline">
+    <img class="p-3" src={{concat "https://picsum.photos/id/" @pid "/" this.getDimension "/"}} />
+</div> 
 
-<div id="sizeSelect" class="d-inline-block l-25">
+<div id="sizeSelect" class="d-inline-block l-25" style="width: 800px">
     <p>Select Size</p>
     <input {{on "click" (fn this.setPrice "5")}} type="radio" checked id="size1" name="size" value="5">
         <label for="size1">Small - 5$</label><br>
@@ -12,8 +11,14 @@
         <label for="size2">Medium - 10$</label><br>  
     <input {{on "click" (fn this.setPrice "15")}} type="radio" id="size3" name="size" value="15">
         <label for="size3">Large - 15$</label><br>
-    <input {{on "click" (fn this.setPrice "20")}} type="radio" id="size3" name="size" value="20">
+    <input {{on "click" (fn this.setPrice "20")}} type="radio" id="size4" name="size" value="20">
         <label for="size4">Extra Large - 20$</label><br>
 
     <button class="btn btn-success" type="button" {{on "click" (fn this.addToCart @pid this.getPrice)}}>Add To Cart</button>
 </div>
+
+
+{{#each-in this.readMetaData as |key item|}}
+    <p class="m-1 p-1"> {{key}} : {{item}} </p>
+{{/each-in}}
+

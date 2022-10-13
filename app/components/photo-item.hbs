@@ -1,5 +1,5 @@
 
-<LinkTo @route="product" @model={{@photoId}}>
+<LinkTo @route="product" @model={{@photoId}} {{on "click" (fn this.setMetaData @pdata)}}>
     <img class=".img-thumbnail" src={{concat "https://picsum.photos/id/" @photoId "/200/"}} />
 </LinkTo>
 

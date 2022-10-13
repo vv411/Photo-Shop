@@ -9,4 +9,5 @@ export default class CartController extends Controller {
       return acc + item.price;
     }, 0);
   }
+
 }

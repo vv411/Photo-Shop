@@ -4,6 +4,7 @@ import { service } from '@ember/service';
 export default class PhotosRoute extends Route {
   @service('metadata') mdata;
 
+  //Call the API to get the images and Data
   async model(params) {
     let currentPage = params.page;
 
@@ -14,8 +15,6 @@ export default class PhotosRoute extends Route {
     let data = await response.json();
 
     data.currPage = currentPage;
-
-    this.mdata.setData(data);
 
     return data;
 

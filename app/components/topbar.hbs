@@ -4,12 +4,9 @@
     class="btn btn-success"
     @route="shoppingCart">
         <img class=".panel-title mx-auto" src="https://img.icons8.com/ios/452/shopping-cart.png" height ="60" width="80" />
-
-        {{#if this.cart.items.length}}
-            <span class="position-absolute top-20 right-20 d-inline-flex">
+            <span class="position-relative d-inline-flex">
             {{this.cart.items.length}}
             </span>
-        {{/if}}
     </LinkTo>
 
     <LinkTo 

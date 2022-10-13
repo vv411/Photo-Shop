@@ -5,11 +5,12 @@ export default class MetadataService extends Service {
   @tracked metaData = {};
 
   setData(inputObj) {
-    this.metaData = inputObj;
+    if(inputObj) {
+        this.metaData = inputObj;
+    }
   }
 
-  findAuthor(pid) {
-    console.log(this.metaData);
-
+  getMetaData(pid) {
+    return this.metaData;
   }
 }

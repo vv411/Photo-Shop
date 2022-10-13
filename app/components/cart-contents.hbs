@@ -1,15 +1,19 @@
-
 <div>
+  <span class="h2"> Total: {{@tPrice}} $</span>
+  <button class="btn btn-danger d-inline p-2" type="button" {{on "click" (fn this.emptyCart )}}>Remove All</button>
+</div>
+
+<div class="p-1">
+
   <ol>
     {{#each this.cart.items as |item|}}
       <li>
         <img src={{concat "https://picsum.photos/id/" item.id "/200/"}} />
 
-        <span class="p-3">{{item.price}}$</span>
+        <span class="p-2">{{item.price}}$</span>
 
         <button class="btn btn-danger" type="button" {{on "click" (fn this.remove item)}}>   
             Remove
-            <!--<img src="https://img.icons8.com/emoji/344/cross-mark-button-emoji.png" height ="40" width="40" />-->
         </button>
 
       </li>
