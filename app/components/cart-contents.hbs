@@ -1,9 +1,18 @@
 
-<ol>
-  {{#each this.cart.items as |item|}}
-    <li>
-      <img src={{concat "https://picsum.photos/id/" item.id "/200/"}} />
-      <button type="button" {{on "click" (fn this.remove item)}}>Remove</button>
-    </li>
-  {{/each}}
-</ol>
+<div>
+  <ol>
+    {{#each this.cart.items as |item|}}
+      <li>
+        <img src={{concat "https://picsum.photos/id/" item.id "/200/"}} />
+
+        <span class="p-3">{{item.price}}$</span>
+
+        <button class="btn btn-danger" type="button" {{on "click" (fn this.remove item)}}>   
+            Remove
+            <!--<img src="https://img.icons8.com/emoji/344/cross-mark-button-emoji.png" height ="40" width="40" />-->
+        </button>
+
+      </li>
+    {{/each}}
+  </ol>
+</div>

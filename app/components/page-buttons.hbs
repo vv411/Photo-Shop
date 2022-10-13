@@ -1,13 +1,10 @@
 
-<LinkTo @route="photos" @model={{changePage @currPage -1}}> Previous Page</LinkTo>
+<div class="p-5 text-center">
+    <LinkTo @route="photos" @model={{changePage @currPage -1}}> 
+        <img src="https://img.icons8.com/ios/344/circled-chevron-left.png" height ="60" width="60"/>
+    </LinkTo>
 
-<LinkTo @route="photos" @model={{changePage @currPage 1}}> 
-    Next Page
-</LinkTo>
-
-<!--
-<button type="button" {{on "click" (fn this.nextPage @currPage)}}> 
-    Next
-</button>
-
--->
+    <LinkTo @route="photos" @model={{changePage @currPage 1}}> 
+        <img src="https://img.icons8.com/ios/344/circled-chevron-right.png" height ="60" width="60"/>
+    </LinkTo>
+</div>

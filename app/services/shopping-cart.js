@@ -5,7 +5,7 @@ export default class ShoppingCartService extends Service {
   @tracked items = [];
 
   add(item) {
-    this.items.pushObject(item)
+    this.items.pushObject(item);
   }
 
   remove(item) {

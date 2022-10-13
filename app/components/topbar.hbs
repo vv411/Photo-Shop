@@ -1,0 +1,20 @@
+<div id="topBar" class="p-3 mb-2 bg-info mx-auto panel panel-info .center-block panel-title ">
+
+    <LinkTo 
+    class="btn btn-success"
+    @route="shoppingCart">
+        <img class=".panel-title mx-auto" src="https://img.icons8.com/ios/452/shopping-cart.png" height ="60" width="80" />
+
+        {{#if this.cart.items.length}}
+            <span class="position-absolute top-20 right-20 d-inline-flex">
+            {{this.cart.items.length}}
+            </span>
+        {{/if}}
+    </LinkTo>
+
+    <LinkTo 
+    class="p-2 m-2 btn btn-primary"
+    @route="photos" @model="1">
+        <img class=".panel-title" src="https://img.icons8.com/dotty/344/shop.png" height ="60" width="80" />
+    </LinkTo>
+</div>

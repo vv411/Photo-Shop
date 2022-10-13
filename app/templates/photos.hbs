@@ -1,11 +1,10 @@
 
 {{page-title "Photos"}}
 
-<div id="container">
+<div class="p-1">
   {{#each @model as |photo|}}
       <Photo-Item
           @photoId={{photo.id}}
-          @data={{photo}}
       />
   {{/each}}
 

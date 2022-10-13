@@ -4,7 +4,7 @@ module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'ember-photo-shop',
     environment,
-    rootURL: '/photos/1',
+    rootURL: '/',
     locationType: 'history',
     EmberENV: {
       FEATURES: {
